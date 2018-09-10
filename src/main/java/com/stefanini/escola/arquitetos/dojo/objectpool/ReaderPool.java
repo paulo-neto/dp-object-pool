@@ -28,7 +28,7 @@ public class ReaderPool {
 				unlocked.add(new Reader("READER_"+i,""));
 			}
 		}
-		if(unlocked.size() <- maxReaders) {
+		if(unlocked.size() <= maxReaders) {
 			reader = unlocked.iterator().next();
 			unlocked.remove(reader);
 			locked.add(reader);
