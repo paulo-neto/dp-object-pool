@@ -19,6 +19,7 @@ public class Reader {
     public Reader(String identificador, String nomeArquivo){
         this.identificador = identificador;
         try {
+	    nomeArquivo = System.getProperty("user.dir").concat("/src/main/resources/").concat(nomeArquivo);
             this.leitor = new BufferedReader(new FileReader(new File(nomeArquivo)));
         } catch (Exception e) {
             logger.log(Level.SEVERE,"ERRO: ",e);
