@@ -25,7 +25,7 @@ public class ReaderPool {
 		Reader reader = null;
 		if(unlocked.size() == 0) {
 			for(int i = 1; i <= maxReaders; i++) {
-				unlocked.add(new Reader("READER_"+i,""));
+				unlocked.add(new Reader("READER_"+i,"saida.txt"));
 			}
 		}
 		if(unlocked.size() <= maxReaders) {
